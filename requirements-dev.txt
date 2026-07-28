@@ -1,0 +1,10 @@
+# Full local development environment — for running the notebooks and the
+# training script (outputs/train_models.py). Install with:
+#     pip install -r requirements-dev.txt
+#
+# Includes everything in the deployment requirements PLUS the plotting and
+# notebook tools used to prepare the data, train the models and make figures.
+-r requirements.txt
+matplotlib>=3.7
+seaborn>=0.12
+jupyter>=1.0

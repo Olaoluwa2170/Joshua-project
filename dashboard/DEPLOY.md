@@ -31,11 +31,34 @@ Spaces, Render) are noted at the end.
    - Go to <https://share.streamlit.io> and sign in with GitHub.
    - Click **Create app** → **Deploy a public app from GitHub**.
    - Repository: your repo. Branch: `main`. **Main file path:** `dashboard/app.py`.
+   - **Open "Advanced settings" and set Python version to 3.12.** This avoids
+     dependency build errors (see Troubleshooting below).
    - Click **Deploy**. First build takes a few minutes while it installs
      `requirements.txt`.
 
 3. **Done.** You get a public URL like
    `https://<your-app>.streamlit.app` that you can share or show in your defence.
+
+---
+
+## Troubleshooting
+
+### "Failed building wheel for pyarrow" / "Error during processing dependencies"
+This means the installer tried to build a package from source instead of using
+a ready-made version. Two fixes, applied together:
+
+1. **Use the lean `requirements.txt`** (already done in this project). It lists
+   only what the dashboard needs, with loose version pins so the installer can
+   pick pre-built packages. The training-only libraries live in
+   `requirements-dev.txt` and are not installed on the server.
+
+2. **Pin the Python version to 3.12.** In the app's **Settings → General →
+   Python version**, choose **3.12**, then **Reboot** the app. (Or delete the
+   app and redeploy, setting Python 3.12 in *Advanced settings*.) `pyarrow` and
+   the other libraries all have ready-made versions for Python 3.12.
+
+After changing `requirements.txt`, commit and push the change, then click
+**Reboot app** (or **Manage app → Reboot**) so the server reinstalls.
 
 **Why it just works:** `requirements.txt` pins the exact library versions used to
 train the models, and `app.py` loads everything with paths relative to the repo,

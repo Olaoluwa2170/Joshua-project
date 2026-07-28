@@ -1,16 +1,20 @@
-# Maize Yield Prediction — project dependencies
-# Install with:  pip install -r requirements.txt
+# Dashboard runtime dependencies — what Streamlit Cloud installs.
+# Only what dashboard/app.py needs at runtime (plus scikit-learn & xgboost,
+# which are required to load the saved models even though app.py does not
+# import them directly).
 #
-# Versions are pinned to those used to TRAIN and SAVE the models, so the saved
-# .joblib files load cleanly when the dashboard is deployed (mismatched
-# scikit-learn/xgboost versions can fail to unpickle a saved model).
-pandas==2.3.3
-numpy==2.3.5
-scikit-learn==1.7.2
-xgboost==3.3.0
-joblib==1.5.2
-matplotlib==3.10.6
-seaborn==0.13.2
-streamlit==1.51.0
-reportlab==5.0.0          # builds the downloadable PDF prediction report
-jupyter>=1.0             # only needed to run the notebooks, not the dashboard
+# Pins are intentionally loose (>=) so the installer can use pre-built
+# packages and avoid slow, failure-prone source builds (e.g. pyarrow).
+# scikit-learn and xgboost are held near the versions the models were saved
+# with, so the saved .joblib files load cleanly.
+streamlit>=1.30
+pandas>=2.0
+numpy>=2.0
+scikit-learn>=1.5,<1.8
+xgboost>=2.0,<4
+joblib>=1.3
+reportlab>=4.0
+
+# NOTE: matplotlib, seaborn and jupyter are only needed to RUN THE NOTEBOOKS
+# and the training script locally — not the deployed dashboard. They live in
+# requirements-dev.txt to keep this deployment lean.
