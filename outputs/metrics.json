@@ -1,0 +1,136 @@
+{
+  "raw_rows": 10000,
+  "raw_cols": 13,
+  "naive_missing_irrigation": 2538,
+  "naive_missing_prevcrop": 2031,
+  "correct_missing_total": 0,
+  "literal_none_rows": 4035,
+  "maize_rows": 2477,
+  "describe": {
+    "Soil_pH": {
+      "count": 2477.0,
+      "mean": 6.527,
+      "std": 0.572,
+      "min": 5.5,
+      "25%": 6.04,
+      "50%": 6.54,
+      "75%": 7.01,
+      "max": 7.5
+    },
+    "Rainfall_mm": {
+      "count": 2477.0,
+      "mean": 849.164,
+      "std": 374.457,
+      "min": 200.1,
+      "25%": 522.6,
+      "50%": 853.8,
+      "75%": 1169.3,
+      "max": 1499.4
+    },
+    "Temperature_C": {
+      "count": 2477.0,
+      "mean": 24.911,
+      "std": 5.81,
+      "min": 15.0,
+      "25%": 19.9,
+      "50%": 24.7,
+      "75%": 30.0,
+      "max": 35.0
+    },
+    "Humidity_pct": {
+      "count": 2477.0,
+      "mean": 60.478,
+      "std": 17.328,
+      "min": 30.0,
+      "25%": 45.4,
+      "50%": 60.7,
+      "75%": 75.5,
+      "max": 90.0
+    },
+    "Fertilizer_Used_kg": {
+      "count": 2477.0,
+      "mean": 175.172,
+      "std": 71.696,
+      "min": 50.5,
+      "25%": 114.0,
+      "50%": 176.0,
+      "75%": 237.6,
+      "max": 299.8
+    },
+    "Pesticides_Used_kg": {
+      "count": 2477.0,
+      "mean": 25.037,
+      "std": 14.245,
+      "min": 0.0,
+      "25%": 12.6,
+      "50%": 25.6,
+      "75%": 37.4,
+      "max": 50.0
+    },
+    "Planting_Density": {
+      "count": 2477.0,
+      "mean": 14.908,
+      "std": 5.844,
+      "min": 5.0,
+      "25%": 9.8,
+      "50%": 14.9,
+      "75%": 19.9,
+      "max": 25.0
+    },
+    "Yield_ton_per_ha": {
+      "count": 2477.0,
+      "mean": 118.111,
+      "std": 38.026,
+      "min": 35.65,
+      "25%": 86.98,
+      "50%": 118.37,
+      "75%": 150.36,
+      "max": 207.21
+    }
+  },
+  "duplicates_removed": 0,
+  "range_violations": {},
+  "rows_with_invalid_values": 0,
+  "missing_pct_per_column": {
+    "Crop": 0.0,
+    "Region": 0.0,
+    "Soil_Type": 0.0,
+    "Soil_pH": 0.0,
+    "Rainfall_mm": 0.0,
+    "Temperature_C": 0.0,
+    "Humidity_pct": 0.0,
+    "Fertilizer_Used_kg": 0.0,
+    "Irrigation": 0.0,
+    "Pesticides_Used_kg": 0.0,
+    "Planting_Density": 0.0,
+    "Previous_Crop": 0.0,
+    "Yield_ton_per_ha": 0.0
+  },
+  "rows_dropped_high_missing": 0,
+  "imputation_fill_values": {},
+  "missing_after_handling": 0,
+  "n_features_after_encoding": 19,
+  "train_rows": 1981,
+  "test_rows": 496,
+  "xgb": {
+    "rmse": 5.843,
+    "mae": 4.641,
+    "r2": 0.9766,
+    "accuracy_within_10pct": 94.56,
+    "tolerance_ton_per_ha": 11.57
+  },
+  "top_features": {
+    "Fertilizer_Used_kg": 0.8366000056266785,
+    "Rainfall_mm": 0.06599999964237213,
+    "Region_Region_D": 0.009999999776482582,
+    "Irrigation_Sprinkler": 0.008799999952316284,
+    "Irrigation_Flood": 0.00839999970048666,
+    "Soil_Type_Loam": 0.008100000210106373,
+    "Pesticides_Used_kg": 0.007499999832361937,
+    "Temperature_C": 0.007400000002235174,
+    "Region_Region_C": 0.0071000000461936,
+    "Humidity_pct": 0.006500000134110451,
+    "Previous_Crop_Wheat": 0.00559999980032444,
+    "Previous_Crop_Rice": 0.004000000189989805
+  }
+}

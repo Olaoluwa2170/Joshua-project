@@ -1,0 +1,16 @@
+# Maize Yield Prediction — project dependencies
+# Install with:  pip install -r requirements.txt
+#
+# Versions are pinned to those used to TRAIN and SAVE the models, so the saved
+# .joblib files load cleanly when the dashboard is deployed (mismatched
+# scikit-learn/xgboost versions can fail to unpickle a saved model).
+pandas==2.3.3
+numpy==2.3.5
+scikit-learn==1.7.2
+xgboost==3.3.0
+joblib==1.5.2
+matplotlib==3.10.6
+seaborn==0.13.2
+streamlit==1.51.0
+reportlab==5.0.0          # builds the downloadable PDF prediction report
+jupyter>=1.0             # only needed to run the notebooks, not the dashboard

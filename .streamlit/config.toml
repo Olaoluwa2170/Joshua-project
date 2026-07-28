@@ -1,0 +1,10 @@
+# Streamlit theme + server settings for the maize dashboard.
+[theme]
+primaryColor = "#2A9D8F"
+backgroundColor = "#FFFFFF"
+secondaryBackgroundColor = "#EEF3F5"
+textColor = "#1F3A5F"
+font = "sans serif"
+
+[server]
+headless = true

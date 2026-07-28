@@ -1,0 +1,123 @@
+{
+  "feature_columns": [
+    "Soil_pH",
+    "Rainfall_mm",
+    "Temperature_C",
+    "Humidity_pct",
+    "Fertilizer_Used_kg",
+    "Pesticides_Used_kg",
+    "Planting_Density",
+    "Region_Region_B",
+    "Region_Region_C",
+    "Region_Region_D",
+    "Soil_Type_Loam",
+    "Soil_Type_Sandy",
+    "Irrigation_Flood",
+    "Irrigation_Rainfed",
+    "Irrigation_Sprinkler",
+    "Previous_Crop_Maize",
+    "Previous_Crop_No_Previous_Crop",
+    "Previous_Crop_Rice",
+    "Previous_Crop_Wheat"
+  ],
+  "numeric_features": [
+    "Soil_pH",
+    "Rainfall_mm",
+    "Temperature_C",
+    "Humidity_pct",
+    "Fertilizer_Used_kg",
+    "Pesticides_Used_kg",
+    "Planting_Density"
+  ],
+  "categorical_features": [
+    "Region",
+    "Soil_Type",
+    "Irrigation",
+    "Previous_Crop"
+  ],
+  "category_options": {
+    "Region": [
+      "Region_A",
+      "Region_B",
+      "Region_C",
+      "Region_D"
+    ],
+    "Soil_Type": [
+      "Clay",
+      "Loam",
+      "Sandy"
+    ],
+    "Irrigation": [
+      "Drip",
+      "Flood",
+      "Rainfed",
+      "Sprinkler"
+    ],
+    "Previous_Crop": [
+      "Barley",
+      "Maize",
+      "No_Previous_Crop",
+      "Rice",
+      "Wheat"
+    ]
+  },
+  "numeric_ranges": {
+    "Soil_pH": [
+      5.5,
+      7.5
+    ],
+    "Rainfall_mm": [
+      200.1,
+      1499.4
+    ],
+    "Temperature_C": [
+      15.0,
+      35.0
+    ],
+    "Humidity_pct": [
+      30.0,
+      90.0
+    ],
+    "Fertilizer_Used_kg": [
+      50.5,
+      299.8
+    ],
+    "Pesticides_Used_kg": [
+      0.0,
+      50.0
+    ],
+    "Planting_Density": [
+      5.0,
+      25.0
+    ]
+  },
+  "target": "Yield_ton_per_ha",
+  "tolerance_ton_per_ha": 11.572,
+  "best_model": "Linear Regression",
+  "results": {
+    "Linear Regression": {
+      "rmse": 5.325,
+      "mae": 4.243,
+      "r2": 0.9805,
+      "accuracy_pct": 95.77,
+      "cv_r2_mean": 0.9826,
+      "cv_r2_std": 0.002
+    },
+    "Random Forest": {
+      "rmse": 5.732,
+      "mae": 4.537,
+      "r2": 0.9774,
+      "accuracy_pct": 95.16,
+      "cv_r2_mean": 0.9789,
+      "cv_r2_std": 0.0026
+    },
+    "XGBoost": {
+      "rmse": 5.558,
+      "mae": 4.429,
+      "r2": 0.9788,
+      "accuracy_pct": 96.37,
+      "cv_r2_mean": 0.9807,
+      "cv_r2_std": 0.0022
+    }
+  }
+}

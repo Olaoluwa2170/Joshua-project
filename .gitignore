@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Local runtime data (recreated automatically on first run)
+dashboard/predictions.db
+
+# OS
+.DS_Store
+
+# Scratch / build artefacts
+outputs/report.html

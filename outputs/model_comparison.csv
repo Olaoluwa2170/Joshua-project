@@ -1,0 +1,4 @@
+,rmse,mae,r2,accuracy_pct
+Linear Regression,5.325,4.243,0.98,95.77
+Random Forest,5.732,4.537,0.977,95.16
+XGBoost,5.558,4.429,0.979,96.37
