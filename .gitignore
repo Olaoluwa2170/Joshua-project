@@ -11,3 +11,4 @@ dashboard/predictions.db
 
 # Scratch / build artefacts
 outputs/report.html
+outputs/tutorial.html
